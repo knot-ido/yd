@@ -1,0 +1,586 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>追梦人主页</title>
+<link rel="stylesheet" type="text/css" href="3.css" media="screen" />
+<link rel="stylesheet" href="https://static.noisky.cn/homepage/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css" />
+<link rel="stylesheet" href="css/main.css">
+</head>
+<style>
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+.close:hover,
+.close:focus {
+  box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+.offset {
+  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+.offset:hover, .offset:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.fill {
+  --color: #a972cb;
+  --hover: #cb72aa;
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.close {
+  --color: #ff7f82;
+  --hover: #ffdc7f;
+}
+
+.raise {
+  --color: #ffa260;
+  --hover: #e5ff60;
+}
+
+.up {
+  --color: #e4cb58;
+  --hover: #94e458;
+}
+
+.slide {
+  --color: #8fc866;
+  --hover: #66c887;
+}
+
+.offset {
+  --color: #19bc8b;
+  --hover: #1973bc;
+}
+
+button {
+  color: var(--color);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+code {
+  color: #e4cb58;
+  font: inherit;
+}
+
+</style>
+<style type="text/css">
+
+*{margin:0;padding:0;}
+
+.slideshow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slideshow-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: no-repeat 50% 50%;
+  background-size: cover;
+  -webkit-animation-name: kenburns;
+          animation-name: kenburns;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 16s;
+          animation-duration: 16s;
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.slideshow-image:nth-child(1) {
+  -webkit-animation-name: kenburns-1;
+          animation-name: kenburns-1;
+  z-index: 3;
+}
+.slideshow-image:nth-child(2) {
+  -webkit-animation-name: kenburns-2;
+          animation-name: kenburns-2;
+  z-index: 2;
+}
+.slideshow-image:nth-child(3) {
+  -webkit-animation-name: kenburns-3;
+          animation-name: kenburns-3;
+  z-index: 1;
+}
+.slideshow-image:nth-child(4) {
+  -webkit-animation-name: kenburns-4;
+          animation-name: kenburns-4;
+  z-index: 0;
+}
+
+@-webkit-keyframes kenburns-1 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  1.5625% {
+    opacity: 1;
+  }
+  23.4375% {
+    opacity: 1;
+  }
+  26.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  98.4375% {
+    opacity: 0;
+    -webkit-transform: scale(1.21176);
+            transform: scale(1.21176);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes kenburns-1 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  1.5625% {
+    opacity: 1;
+  }
+  23.4375% {
+    opacity: 1;
+  }
+  26.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  98.4375% {
+    opacity: 0;
+    -webkit-transform: scale(1.21176);
+            transform: scale(1.21176);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes kenburns-2 {
+  23.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  26.5625% {
+    opacity: 1;
+  }
+  48.4375% {
+    opacity: 1;
+  }
+  51.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes kenburns-2 {
+  23.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  26.5625% {
+    opacity: 1;
+  }
+  48.4375% {
+    opacity: 1;
+  }
+  51.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@-webkit-keyframes kenburns-3 {
+  48.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  51.5625% {
+    opacity: 1;
+  }
+  73.4375% {
+    opacity: 1;
+  }
+  76.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes kenburns-3 {
+  48.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  51.5625% {
+    opacity: 1;
+  }
+  73.4375% {
+    opacity: 1;
+  }
+  76.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@-webkit-keyframes kenburns-4 {
+  73.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  76.5625% {
+    opacity: 1;
+  }
+  98.4375% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes kenburns-4 {
+  73.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  76.5625% {
+    opacity: 1;
+  }
+  98.4375% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  z-index: 99;
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 1em 2em -1em rgba(0, 0, 0, 0.5);
+  padding: 1em 2em;
+  line-height: 1.5;
+}
+h1 small {
+  display: block;
+  text-transform: lowercase;
+  font-size: .7em;
+}
+h1 small:first-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding-bottom: .5em;
+}
+h1 small:last-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding-top: .5em;
+}
+</style>
+
+</head>
+<body>
+<h1>
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">    
+    <a href="http://yd.abcdns.tk/" title="追梦人空间><img src="https://q2.qlogo.cn/headimg_dl?dst_uin=26692223&spec=100" width="300" alt="Noisky logo" class="panel-cover__logo logo"></a>
+	
+<style type="text/css">
+	.btn{
+		border: none;
+		border-radius: 0;
+		text-transform: uppercase;
+		padding-top: 0;
+		padding-bottom: 0;
+		position: relative;
+		transition: all 0.3s ease 0s;
+	}
+	.btn:before{
+		content: "";
+		display: block;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-top: 2px solid transparent;
+		transition: all 0.3s ease 0s;
+	}
+	.btn:hover:before{
+		transform: translateY(42px);
+	}
+	.btn:after{
+		content: "\f105";
+		font-family:fontawesome;
+		display: inline-block;
+		width: 44px;
+		height: 44px;
+		border: 2px solid transparent;
+		font-size: 24px;
+		line-height: 40px;
+		position: relative;
+		top: 0;
+		right: -16px;
+		transition: all 0.43s ease 0s;
+	}
+	.btn:hover:after{
+		transform: rotateX(180deg);
+	}
+	.btn.btn-sm:hover:before{
+		transform: translateY(32px);
+	}
+	.btn.btn-sm:after{
+		width: 34%;
+		height: 34px;
+		line-height: 30px;
+		font-size: 20px;
+		right: -10px;
+	}
+	.btn.btn-xs:hover:before{
+		transform: translateY(22px);
+	}
+	.btn.btn-xs:after{
+		width: 24%;
+		height: 24px;
+		line-height: 20px;
+		font-size: 16px;
+		right: -5px;
+	}
+	.btn.red{
+		color: #ff6e6e;
+	}
+	.btn.red:before,
+	.btn.red:after{
+		border-color: #ff6e6e;
+	}
+	.btn.blue{
+		color: #5cbcf7;
+	}
+	.btn.blue:before,
+	.btn.blue:after{
+		border-color: #5cbcf7;
+	}
+	.btn.orange{
+		color: #ef965b;
+	}
+	.btn.orange:before,
+	.btn.orange:after{
+		border-color: #ef965b;
+	}
+	.btn.green{
+		color: #7ad79a;
+	}
+	.btn.green:before,
+	.btn.green:after{
+		border-color: #7ad79a;
+	}
+	.btn.bai{
+		color: #fff;
+	}
+	.btn.bai:before,
+	.btn.bai:after{
+		border-color: #fff;
+	}
+	.btn.ju{
+		color: #FF5722;
+	}
+	.btn.ju:before,
+	.btn.ju:after{
+		border-color: #FF5722;
+	}
+	@media only  screen and (max-width: 767%){
+		.btn{ margin-bottom: 20px; }
+	}
+</style>
+</div>
+ </script>
+    <br/>
+	<div class="cs">
+	<a href="https://12580sky.com/" target="_Blank"><button class="btn-5">简介</button></a>
+	<a href="https://12580sky.com/" target="_Blank"><button class="btn-3">小高网</button></a>
+	<br/>
+    <a href="http://m.btbtdy.net/" target="_Blank"><button class="btn-7">BT-电影天堂</button></a>
+    <a href="http://sust.dyzyk.com/" target="_Blank"><button class="btn-9">SUST影视网</button></a>
+	<br/>
+    <body class="body--ready" data-pinterest-extension-installed="cr1.39.1"  oncontextmenu=self.event.returnValue=false onselectstart="return false">
+	<br/>
+    <div class="menu">
+    <a class="btn btn-lg red" href="https://mp.qzone.qq.com/u/386831085?uin=386831085&is_famous_space=1&brand_flag=0" >追梦人空间</a>
+    <div class="menu">
+    <br/>
+	<a class="btn btn-lg green" href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=386831085" >联系我吧</a>
+	 </div>
+  </div>
+  <br/>
+  <span class="copyright">&copy; 2018&nbsp<a href="/">Keymoe</a></span>
+        <script src="js/Seffects.js" type="text/javascript"></script>
+  <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="填写微博链接" title="追梦人" target="_blank">
+      <i class="social fa fa-weibo"></i>
+    </a>
+  </li>
+  <!-- QQ -->
+  <li class="navigation__item">
+    <a href="https://wpa.qq.com/msgrd?v=3&uin=386831085&site=qq&menu=yes" title="追梦人@QQ" target="_blank">
+      <i class="social fa fa-qq"></i>
+    </a>
+  </li>
+  <!-- Weixin -->
+  <li class="navigation__item">
+    <a data-v="" href="#" title="扫一扫加我微信" class="wechat">
+	<div data-v="" class="qrCode">
+	 <img data-v="" src="/" width="92" onclick="window.open(&quot;填写你的微信图片链接&quot;)">
+	  <div data-v="" class="triangle-down"></div>
+	</div>
+      <i class="social fa fa-weixin"></i>
+    </a>
+  </li>
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:386831085@qq.com" title="发邮件给我">
+      <i class="social fa fa-envelope"></i>
+    </a>
+  </li>
+  </ul>
+</nav>
+</small>
+</h1></div>
+<div class="slideshow">
+	<div class="slideshow-image" style="background-image: url('img/1.jpg')"></div>
+	<div class="slideshow-image" style="background-image: url('img/2.jpg')"></div>
+	<div class="slideshow-image" style="background-image: url('img/3.jpg')"></div>
+	<div class="slideshow-image" style="background-image: url('img/4.jpg')"></div>
+</div>
+
+<audio autoplay="autoplay">
+<source src="./Key.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
+
